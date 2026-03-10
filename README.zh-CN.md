@@ -12,6 +12,12 @@
 - 正在按公开工程仓库的标准持续整理
 - 不把自己包装成生产级水文平台，也不是论文归档目录
 
+当前仓库关键信号：
+
+- 项目状态： [PROJECT_STATUS.md](PROJECT_STATUS.md)
+- 后续计划： [ROADMAP.md](ROADMAP.md)
+- 更新记录： [CHANGELOG.md](CHANGELOG.md)
+
 ## 适用对象
 
 这个仓库主要适合：
@@ -40,6 +46,12 @@
 1. [docs/README.md](docs/README.md)
 2. [docs/workflow_overview.md](docs/workflow_overview.md)
 3. [config/basin.template.json](config/basin.template.json)
+
+如果你想先判断这个仓库是否适合你的使用场景，建议先看：
+
+1. [PROJECT_STATUS.md](PROJECT_STATUS.md)
+2. [docs/privacy_scope.md](docs/privacy_scope.md)
+3. [docs/limitations.md](docs/limitations.md)
 
 ## 快速开始
 
@@ -132,6 +144,7 @@ python tools/smoke_test.py --lightweight
 ## 文档索引
 
 - [docs/README.md](docs/README.md)
+- [docs/faq.md](docs/faq.md)
 - [docs/model_overview.md](docs/model_overview.md)
 - [docs/data_contract.md](docs/data_contract.md)
 - [docs/workflow_overview.md](docs/workflow_overview.md)
@@ -145,6 +158,7 @@ python tools/smoke_test.py --lightweight
 - 工作流使用问题：见 [SUPPORT.md](SUPPORT.md)
 - 贡献方式：见 [CONTRIBUTING.md](CONTRIBUTING.md)
 - 安全问题上报：见 [SECURITY.md](SECURITY.md)
+- 社区行为规范：见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ## 引用
 

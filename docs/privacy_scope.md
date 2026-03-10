@@ -1,8 +1,8 @@
-# Privacy and Publication Scope
+# Privacy And Publication Scope
 
 This repository is a public method release.
 
-简述：公开版只保留可复用的方法，不保留任何特定流域的建模叙述、默认案例或结果快照。
+It retains reusable method and workflow content while excluding basin-specific modeling narratives, defaults, and private run material.
 
 ## Excluded Material
 

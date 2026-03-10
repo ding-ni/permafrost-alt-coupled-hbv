@@ -2,7 +2,7 @@
 
 This repository exposes three related workflows that share a common data contract and workspace layout.
 
-简述：三套模型是递进关系，不是互相独立的三个项目。
+The three models should be understood as one method family rather than three unrelated subprojects.
 
 ## Original HBV
 
@@ -48,6 +48,7 @@ Expected inputs:
 - basin-agnostic documentation
 - explicit reproducibility boundaries
 - stable output filenames
+- a clear handoff from improved HBV outputs into ALT-coupled workflows
 
 ## Public Release Boundary
 

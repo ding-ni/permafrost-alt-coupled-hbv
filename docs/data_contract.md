@@ -23,10 +23,10 @@ This document defines the public input and output expectations for the reusable 
 
 ## Configuration Contract
 
-The authoritative schema is provided by:
+The authoritative public config artifacts are:
 
 - `config/basin.template.json`
-- `config/schema/config.schema.json`
+- `config/basin.schema.json`
 
 At minimum, the public config is expected to declare:
 
@@ -37,6 +37,8 @@ At minimum, the public config is expected to declare:
 - objective months when seasonal evaluation is used
 - forcing preferences
 - ALT reference period
+- coupling start year
+- improved HBV handoff path when ALT-coupled workflows are used
 
 ## Output Contract
 
@@ -59,7 +61,7 @@ At minimum, the public config is expected to declare:
 
 ## Public Repository Rule
 
-The repository stores interface definitions and examples, not real scientific datasets. Do not commit:
+The repository stores interface definitions and fixtures, not real scientific datasets. Do not commit:
 
 - raw forcing archives
 - private observation files

@@ -10,7 +10,28 @@ This directory contains the public engineering and method documentation for the 
 4. [output_guide.md](output_guide.md)
 5. [privacy_scope.md](privacy_scope.md)
 6. [limitations.md](limitations.md)
-7. [release_checklist.md](release_checklist.md)
+7. [faq.md](faq.md)
+8. [release_checklist.md](release_checklist.md)
+
+## Reader Paths
+
+If you are new to the repository:
+
+1. [workflow_overview.md](workflow_overview.md)
+2. [model_overview.md](model_overview.md)
+3. [data_contract.md](data_contract.md)
+
+If you are checking publication boundaries:
+
+1. [privacy_scope.md](privacy_scope.md)
+2. [limitations.md](limitations.md)
+3. [faq.md](faq.md)
+
+If you maintain the repository:
+
+1. [release_checklist.md](release_checklist.md)
+2. [faq.md](faq.md)
+3. root-level [SUPPORT.md](../SUPPORT.md)
 
 ## What Each File Covers
 
@@ -20,4 +41,5 @@ This directory contains the public engineering and method documentation for the 
 - `output_guide.md`: how to interpret main artifacts
 - `privacy_scope.md`: what is intentionally excluded from the public release
 - `limitations.md`: method and repository limitations
+- `faq.md`: recurring repository and usage questions
 - `release_checklist.md`: pre-release checks for maintainers

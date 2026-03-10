@@ -16,6 +16,12 @@ This repository is a public method release and research-software codebase.
 - It is actively curated as a public-facing workflow repository.
 - It is not positioned as a production hydrological platform or a thesis archive.
 
+Current repository signals:
+
+- project status: [PROJECT_STATUS.md](PROJECT_STATUS.md)
+- planned improvements: [ROADMAP.md](ROADMAP.md)
+- release history: [CHANGELOG.md](CHANGELOG.md)
+
 ## Who This Repository Is For
 
 This repository is primarily for:
@@ -44,6 +50,12 @@ If this is your first time in the repository, read these files in order:
 1. [docs/README.md](docs/README.md)
 2. [docs/workflow_overview.md](docs/workflow_overview.md)
 3. [config/basin.template.json](config/basin.template.json)
+
+If you are evaluating whether this repository fits your use case, read:
+
+1. [PROJECT_STATUS.md](PROJECT_STATUS.md)
+2. [docs/privacy_scope.md](docs/privacy_scope.md)
+3. [docs/limitations.md](docs/limitations.md)
 
 ## Quick Start
 
@@ -136,6 +148,7 @@ For a release checklist, see [docs/release_checklist.md](docs/release_checklist.
 ## Documentation Index
 
 - [docs/README.md](docs/README.md)
+- [docs/faq.md](docs/faq.md)
 - [docs/model_overview.md](docs/model_overview.md)
 - [docs/data_contract.md](docs/data_contract.md)
 - [docs/workflow_overview.md](docs/workflow_overview.md)
@@ -149,6 +162,7 @@ For a release checklist, see [docs/release_checklist.md](docs/release_checklist.
 - Workflow questions: see [SUPPORT.md](SUPPORT.md)
 - Contribution process: see [CONTRIBUTING.md](CONTRIBUTING.md)
 - Security reporting guidance: see [SECURITY.md](SECURITY.md)
+- Community expectations: see [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ## Citation
 
