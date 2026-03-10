@@ -1,8 +1,8 @@
 # Permafrost ALT-Coupled HBV
 
-Reusable Original / Improved / ALT-coupled HBV workflows for cold-region basin studies.
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-中文说明：这是一个面向公开复用的多年冻土 ALT 耦合 HBV 方法仓库，不包含特定流域案例叙述、私有数据或论文快照。
+Reusable Original / Improved / ALT-coupled HBV workflows for cold-region basin studies.
 
 ## What This Repository Is
 
@@ -59,6 +59,7 @@ permafrost-alt-coupled-hbv/
 |- workflow/
 |- .github/
 |- README.md
+|- README.zh-CN.md
 |- CONTRIBUTING.md
 |- THIRD_PARTY.md
 |- environment.yml
