@@ -1,0 +1,50 @@
+{
+  "_notes": [
+    "Copy this file and update it for a new basin.",
+    "One basin should use one dedicated workspace_root.",
+    "Paths may be absolute or relative to this config file.",
+    "The public engine currently supports observation_mode = full_year or seasonal_window.",
+    "For seasonal_window, objective_window_months must currently be [5, 6, 7, 8, 9, 10]."
+  ],
+  "workspace_root": "./workspace/your_basin_name",
+  "basin_name_en": "your_basin_name",
+  "basin_name_zh": "你的流域名称",
+  "catchment_area_km2": 10000.0,
+  "basin_shp": "../examples/synthetic_basin/inputs/basin.shp",
+  "dem_tif": "../examples/synthetic_basin/inputs/dem.tif",
+  "observed_discharge_csv": "../examples/synthetic_basin/inputs/discharge.csv",
+  "observation_mode": "full_year",
+  "objective_window_months": [5, 6, 7, 8, 9, 10],
+  "glacier_shp": "",
+  "alt_input_dir": "../examples/synthetic_basin/inputs/alt",
+  "bbox": {
+    "north": 35.5,
+    "west": 90.5,
+    "south": 33.0,
+    "east": 93.5
+  },
+  "time": {
+    "start_year": 2006,
+    "end_year": 2020,
+    "warmup_start": "2006-01-01",
+    "warmup_end": "2008-12-31",
+    "calibration_start": "2009-01-01",
+    "calibration_end": "2017-12-31",
+    "validation_start": "2018-01-01",
+    "validation_end": "2020-12-31"
+  },
+  "alt_reference": {
+    "start_year": 2006,
+    "end_year": 2017
+  },
+  "fao56_mean_elevation_m": 4500.0,
+  "default_precip_source": "mswep",
+  "coupling_start_year": 2018,
+  "improved_hbv_run_path": "",
+  "improved_hbv_baseline_params": {
+    "FC": 0.0,
+    "PERC": 0.0,
+    "K2": 0.0,
+    "K": 0.0
+  }
+}

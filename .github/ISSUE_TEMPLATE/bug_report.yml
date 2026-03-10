@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a workflow, documentation, or interface problem.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please keep the report basin-agnostic. Do not paste private data paths or private run outputs unless they are fully sanitized.
+  - type: input
+    id: entrypoint
+    attributes:
+      label: Entrypoint
+      description: Which script or workflow command were you running?
+      placeholder: workflow/models/calibrate_improved_hbv.py
+    validations:
+      required: true
+  - type: textarea
+    id: config_scope
+    attributes:
+      label: Relevant config fields
+      description: List only the relevant keys, not the entire private config.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior or error
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I removed private basin identifiers and local absolute paths from this report.
+          required: true

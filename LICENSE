@@ -1,0 +1,19 @@
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+SPDX-License-Identifier: GPL-3.0-only
+
+This repository is distributed under the terms of the GNU General Public
+License, version 3 only.
+
+You may obtain the full license text at:
+https://www.gnu.org/licenses/gpl-3.0.txt
+
+For practical repository use:
+
+- you may copy, modify, and redistribute this work under GPL-3.0-only
+- derivative public releases must remain license-compatible
+- this software is provided without warranty
+
+If you redistribute this repository, include this notice together with the
+full GPL-3.0 license text required by your distribution workflow.

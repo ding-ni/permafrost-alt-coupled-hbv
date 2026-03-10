@@ -1,0 +1,47 @@
+{
+  "_notes": [
+    "Synthetic smoke-test config for the public repository.",
+    "This example is for interface validation only."
+  ],
+  "workspace_root": "./workspace",
+  "basin_name_en": "synthetic_basin",
+  "basin_name_zh": "合成流域",
+  "catchment_area_km2": 25.0,
+  "basin_shp": "./inputs/basin.shp",
+  "dem_tif": "./inputs/dem.tif",
+  "observed_discharge_csv": "./inputs/discharge.csv",
+  "observation_mode": "full_year",
+  "objective_window_months": [5, 6, 7, 8, 9, 10],
+  "glacier_shp": "",
+  "alt_input_dir": "./inputs/alt",
+  "bbox": {
+    "north": 0.04,
+    "west": 0.0,
+    "south": 0.0,
+    "east": 0.04
+  },
+  "time": {
+    "start_year": 2006,
+    "end_year": 2006,
+    "warmup_start": "2006-01-01",
+    "warmup_end": "2006-01-10",
+    "calibration_start": "2006-01-11",
+    "calibration_end": "2006-10-31",
+    "validation_start": "2006-11-01",
+    "validation_end": "2006-12-31"
+  },
+  "alt_reference": {
+    "start_year": 2006,
+    "end_year": 2006
+  },
+  "fao56_mean_elevation_m": 4600.0,
+  "default_precip_source": "mswep",
+  "coupling_start_year": 2006,
+  "improved_hbv_run_path": "",
+  "improved_hbv_baseline_params": {
+    "FC": 600.0,
+    "PERC": 0.05,
+    "K2": 0.002,
+    "K": 0.08
+  }
+}

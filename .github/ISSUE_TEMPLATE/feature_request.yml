@@ -1,0 +1,25 @@
+name: Feature request
+description: Propose an improvement to the reusable public workflow.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What reusable workflow limitation are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the intended behavior, interface, or documentation improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and compatibility
+      description: Note any expected impact on configs, outputs, or optional dependencies.

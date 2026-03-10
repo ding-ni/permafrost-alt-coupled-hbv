@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/permafrost-alt-coupled-hbv/basin.schema.json",
+  "title": "Permafrost ALT-Coupled HBV Basin Config",
+  "type": "object",
+  "required": [
+    "workspace_root",
+    "basin_name_en",
+    "catchment_area_km2",
+    "basin_shp",
+    "dem_tif",
+    "observed_discharge_csv",
+    "observation_mode",
+    "objective_window_months",
+    "alt_input_dir",
+    "bbox",
+    "time",
+    "alt_reference",
+    "default_precip_source",
+    "coupling_start_year",
+    "improved_hbv_baseline_params"
+  ],
+  "properties": {
+    "_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "workspace_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "basin_name_en": {
+      "type": "string",
+      "minLength": 1
+    },
+    "basin_name_zh": {
+      "type": "string"
+    },
+    "catchment_area_km2": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "basin_shp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dem_tif": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_discharge_csv": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observation_mode": {
+      "type": "string",
+      "enum": ["full_year", "seasonal_window"]
+    },
+    "objective_window_months": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 12
+      },
+      "minItems": 1
+    },
+    "glacier_shp": {
+      "type": "string"
+    },
+    "alt_input_dir": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bbox": {
+      "type": "object",
+      "required": ["north", "west", "south", "east"],
+      "properties": {
+        "north": {"type": "number"},
+        "west": {"type": "number"},
+        "south": {"type": "number"},
+        "east": {"type": "number"}
+      }
+    },
+    "time": {
+      "type": "object",
+      "required": [
+        "start_year",
+        "end_year",
+        "warmup_start",
+        "warmup_end",
+        "calibration_start",
+        "calibration_end",
+        "validation_start",
+        "validation_end"
+      ],
+      "properties": {
+        "start_year": {"type": "integer"},
+        "end_year": {"type": "integer"},
+        "warmup_start": {"type": "string", "format": "date"},
+        "warmup_end": {"type": "string", "format": "date"},
+        "calibration_start": {"type": "string", "format": "date"},
+        "calibration_end": {"type": "string", "format": "date"},
+        "validation_start": {"type": "string", "format": "date"},
+        "validation_end": {"type": "string", "format": "date"}
+      }
+    },
+    "alt_reference": {
+      "type": "object",
+      "required": ["start_year", "end_year"],
+      "properties": {
+        "start_year": {"type": "integer"},
+        "end_year": {"type": "integer"}
+      }
+    },
+    "fao56_mean_elevation_m": {
+      "type": "number"
+    },
+    "default_precip_source": {
+      "type": "string",
+      "enum": ["mswep", "cmfd"]
+    },
+    "coupling_start_year": {
+      "type": "integer"
+    },
+    "improved_hbv_run_path": {
+      "type": "string"
+    },
+    "improved_hbv_baseline_params": {
+      "type": "object",
+      "required": ["FC", "PERC", "K2", "K"],
+      "properties": {
+        "FC": {"type": "number"},
+        "PERC": {"type": "number"},
+        "K2": {"type": "number"},
+        "K": {"type": "number"}
+      }
+    }
+  }
+}
