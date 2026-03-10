@@ -145,6 +145,8 @@ python tools/smoke_test.py --lightweight
 
 - [docs/README.md](docs/README.md)
 - [docs/faq.md](docs/faq.md)
+- [docs/architecture.md](docs/architecture.md)
+- [docs/reproducibility.md](docs/reproducibility.md)
 - [docs/model_overview.md](docs/model_overview.md)
 - [docs/data_contract.md](docs/data_contract.md)
 - [docs/workflow_overview.md](docs/workflow_overview.md)

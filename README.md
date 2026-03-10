@@ -2,6 +2,7 @@
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](environment.yml)
+[![CI](https://github.com/ding-ni/permafrost-alt-coupled-hbv/actions/workflows/ci.yml/badge.svg)](https://github.com/ding-ni/permafrost-alt-coupled-hbv/actions/workflows/ci.yml)
 [![Status](https://img.shields.io/badge/status-research%20software-6f42c1.svg)](docs/README.md)
 
 [English](README.md) | [简体中文](README.zh-CN.md)
@@ -149,6 +150,8 @@ For a release checklist, see [docs/release_checklist.md](docs/release_checklist.
 
 - [docs/README.md](docs/README.md)
 - [docs/faq.md](docs/faq.md)
+- [docs/architecture.md](docs/architecture.md)
+- [docs/reproducibility.md](docs/reproducibility.md)
 - [docs/model_overview.md](docs/model_overview.md)
 - [docs/data_contract.md](docs/data_contract.md)
 - [docs/workflow_overview.md](docs/workflow_overview.md)
