@@ -29,6 +29,7 @@ These tools are optional because not every basin workflow will use every acquisi
 - Keep all basin-specific data outside the repository.
 - Use a separate workspace per basin.
 - Treat the synthetic example as an interface test, not a scientific benchmark.
+- Run `python tools/verify_public_repo.py` and `python tools/smoke_test.py --lightweight` before pushing public updates.
 
 ## Release Boundary
 
