@@ -1,82 +1,62 @@
 # Permafrost ALT-Coupled HBV
 
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](environment.yml)
+[![Status](https://img.shields.io/badge/status-research%20software-6f42c1.svg)](docs/README.md)
+
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 Reusable Original / Improved / ALT-coupled HBV workflows for cold-region basin studies.
 
-## What This Repository Is
+## Project Status
 
-This repository packages three related hydrological workflows:
+This repository is a public method release and research-software codebase.
 
-1. `original_hbv`: a baseline distributed HBV configuration.
-2. `improved_hbv`: a stronger baseline with zoned melt factors, glacier handling, source separation, and multi-objective calibration.
-3. `alt_coupled_hbv`: a dynamic parameter-correction workflow driven by active layer thickness (ALT) reference fields and annual scale factors.
+- It is intended to be reusable across basins.
+- It is actively curated as a public-facing workflow repository.
+- It is not positioned as a production hydrological platform or a thesis archive.
 
-The public release is designed to be:
+## Who This Repository Is For
 
-- reusable across basins
-- configuration-driven
-- free of basin-specific narrative material
-- explicit about reproducibility boundaries
-- easy to validate before publication
+This repository is primarily for:
 
-## What This Repository Is Not
+- researchers working on cold-region hydrology
+- students or collaborators reproducing the workflow on a new basin
+- maintainers who need a basin-agnostic public version of the method
 
-- It is not a thesis archive.
-- It does not ship raw forcing data, observed discharge, or run snapshots.
-- It does not include basin-specific case-study text, figure captions, or default parameter sets tied to a private study area.
-- It does not promise one-click execution for every external data source; some download steps require optional tools and external credentials.
+## Workflow At A Glance
 
-## Model Tiers
+The repository exposes three related model tiers:
 
-### 1. Original HBV
+1. `original_hbv`
+This is the structural baseline used for comparison.
 
-Use this workflow for a structural baseline. It is intentionally simpler and serves as the main comparison target for the improved model.
+2. `improved_hbv`
+This is the main calibration baseline with zoned melt factors, glacier-aware handling, source separation, and reproducible calibration outputs.
 
-### 2. Improved HBV
+3. `alt_coupled_hbv`
+This applies ALT-driven parameter corrections on top of the improved HBV baseline and compares multiple coupling schemes under a shared output contract.
 
-Use this workflow as the main calibration baseline before ALT coupling. It supports:
+## Start Here
 
-- zoned `CFMAX`
-- glacier-aware runoff handling
-- runoff source separation
-- multi-objective calibration outputs such as `metadata.json`, `diagnostics.json`, and `parameters.txt`
+If this is your first time in the repository, read these files in order:
 
-### 3. ALT-Coupled HBV
+1. [docs/README.md](docs/README.md)
+2. [docs/workflow_overview.md](docs/workflow_overview.md)
+3. [config/basin.template.json](config/basin.template.json)
 
-Use this workflow after the improved HBV baseline is calibrated. It applies ALT-driven corrections to selected parameters and compares multiple coupling schemes using a shared output contract.
+## Quick Start
 
-## Repository Layout
+### Installation
 
-```text
-permafrost-alt-coupled-hbv/
-|- config/
-|- docs/
-|- examples/
-|- legacy_core/
-|- shared/
-|- tools/
-|- workflow/
-|- .github/
-|- README.md
-|- README.zh-CN.md
-|- CONTRIBUTING.md
-|- THIRD_PARTY.md
-|- environment.yml
-|- requirements-core.txt
-`- LICENSE
-```
-
-## Installation
-
-### Conda
+Conda:
 
 ```bash
 conda env create -f environment.yml
 conda activate permafrost-alt-hbv
 ```
 
-### pip
+pip:
 
 ```bash
 python -m venv .venv
@@ -84,17 +64,15 @@ python -m venv .venv
 pip install -r requirements-core.txt
 ```
 
-Optional tooling such as `whitebox`, `cdsapi`, `gdown`, or ArcGIS/ArcPy is documented in [docs/workflow_overview.md](docs/workflow_overview.md).
+### Minimal Working Sequence
 
-## Quick Start
-
-1. Copy the basin template in `config/`.
-2. Fill in basin paths, time ranges, observation settings, and ALT reference settings.
+1. Copy the basin config template in `config/`.
+2. Fill in basin paths, time windows, observation settings, and ALT reference settings.
 3. Run the data-preparation steps under `workflow/data_prep/`.
 4. Calibrate the improved HBV baseline.
 5. Run the original HBV baseline for comparison.
 6. Generate ALT correction fields and run the ALT-coupled workflow.
-7. Inspect standardized outputs and generic analysis scripts under `workflow/analysis/`.
+7. Inspect outputs under `workflow/analysis/`.
 
 Typical entrypoints:
 
@@ -104,29 +82,39 @@ python workflow/models/run_original_hbv.py --config config/basin.template.json
 python workflow/models/run_alt_coupled_hbv.py --config config/basin.template.json --improved-run path/to/metadata.json
 ```
 
-## Validation Before You Push
+## Public Scope And Reproducibility Boundary
 
-Run these checks before publishing a change:
+This repository is designed to be:
 
-```bash
-python tools/verify_public_repo.py
-python tools/smoke_test.py --lightweight
+- configuration-driven
+- basin-agnostic
+- explicit about public vs private material
+
+This repository does not ship:
+
+- raw forcing archives
+- private observed discharge files
+- private run snapshots
+- thesis-only case-study prose
+- case-specific figure chains tied to a private basin
+
+For the exact publication boundary, see [docs/privacy_scope.md](docs/privacy_scope.md).
+
+## Repository Map
+
+```text
+permafrost-alt-coupled-hbv/
+|- config/       public configuration template and schema
+|- docs/         method, workflow, scope, and release docs
+|- examples/     synthetic smoke-test example only
+|- legacy_core/  minimal vendored workflow core used by public wrappers
+|- shared/       shared runtime helpers and alias logic
+|- tools/        verification and smoke-test utilities
+|- workflow/     public-facing preprocessing, model, and analysis entrypoints
+`- .github/      issue and pull request templates
 ```
 
-For a short release checklist, see [docs/release_checklist.md](docs/release_checklist.md).
-
-## Configuration Philosophy
-
-The public release is explicit rather than heuristic:
-
-- `observation_mode` is declared in the config
-- seasonal objective windows are declared by month list
-- ALT reference years are declared in the config
-- coupling onset timing is declared in the config
-
-This avoids hidden behavior tied to a single study basin.
-
-## Standard Outputs
+## Standard Output Contract
 
 The repository keeps a stable public output contract:
 
@@ -134,12 +122,20 @@ The repository keeps a stable public output contract:
 - Improved HBV: `metadata.json`, `diagnostics.json`, `parameters.txt`
 - ALT-coupled HBV: `summary.json`, `<scheme>_timeseries.csv`, `<scheme>_param_stats.csv`
 
-## Synthetic Example
+## Validation Before You Push
 
-`examples/synthetic_basin/` is reserved for a minimal smoke-test dataset. It exists to validate interfaces and file contracts, not to demonstrate scientific performance.
+Run these checks before publishing an update:
+
+```bash
+python tools/verify_public_repo.py
+python tools/smoke_test.py --lightweight
+```
+
+For a release checklist, see [docs/release_checklist.md](docs/release_checklist.md).
 
 ## Documentation Index
 
+- [docs/README.md](docs/README.md)
 - [docs/model_overview.md](docs/model_overview.md)
 - [docs/data_contract.md](docs/data_contract.md)
 - [docs/workflow_overview.md](docs/workflow_overview.md)
@@ -148,9 +144,11 @@ The repository keeps a stable public output contract:
 - [docs/privacy_scope.md](docs/privacy_scope.md)
 - [docs/release_checklist.md](docs/release_checklist.md)
 
-## Contributing
+## Support
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+- Workflow questions: see [SUPPORT.md](SUPPORT.md)
+- Contribution process: see [CONTRIBUTING.md](CONTRIBUTING.md)
+- Security reporting guidance: see [SECURITY.md](SECURITY.md)
 
 ## Citation
 

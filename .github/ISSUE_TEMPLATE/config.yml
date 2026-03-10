@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support Guide
+    url: https://github.com/ding-ni/permafrost-alt-coupled-hbv/blob/main/SUPPORT.md
+    about: Read the support guide before opening an issue.
+  - name: Security Policy
+    url: https://github.com/ding-ni/permafrost-alt-coupled-hbv/blob/main/SECURITY.md
+    about: Read this before reporting a security-sensitive issue.

@@ -6,6 +6,13 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
+
+# Packaging
+build/
+dist/
+*.egg-info/
 
 # Virtual environments
 .venv/
@@ -45,10 +52,6 @@ temp/
 *.npz
 *.tif.aux.xml
 *.ovr
-*.png
-*.jpg
-*.jpeg
-*.pdf
 
 # Archives and binaries
 *.zip

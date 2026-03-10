@@ -30,6 +30,7 @@ These tools are optional because not every basin workflow will use every acquisi
 - Use a separate workspace per basin.
 - Treat the synthetic example as an interface test, not a scientific benchmark.
 - Run `python tools/verify_public_repo.py` and `python tools/smoke_test.py --lightweight` before pushing public updates.
+- Treat `examples/synthetic_basin/inputs/` as tracked test fixtures and `examples/synthetic_basin/workspace/` as generated local output.
 
 ## Release Boundary
 

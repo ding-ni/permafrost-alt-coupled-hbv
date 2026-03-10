@@ -4,12 +4,13 @@ title: "Permafrost ALT-Coupled HBV"
 type: software
 license: GPL-3.0-only
 authors:
-  - name: "Repository Maintainer"
+  - name: "ding-ni"
 abstract: >-
   Reusable Original, Improved, and ALT-coupled HBV workflows for cold-region
   basin studies, with configuration-driven interfaces and basin-agnostic public
   documentation.
-repository-code: "https://github.com/your-org/permafrost-alt-coupled-hbv"
+repository-code: "https://github.com/ding-ni/permafrost-alt-coupled-hbv"
+url: "https://github.com/ding-ni/permafrost-alt-coupled-hbv"
 keywords:
   - hydrology
   - HBV
@@ -21,6 +22,6 @@ preferred-citation:
   type: software
   title: "Permafrost ALT-Coupled HBV"
   authors:
-    - name: "Repository Maintainer"
+    - name: "ding-ni"
   year: 2026
   license: GPL-3.0-only
